@@ -1,0 +1,63 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Web Server</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        color: #333;
+      }
+      p {
+        color: #555;
+      }
+      a {
+        text-decoration: none;
+        color: #0099cc;
+        font-weight: bold;
+      }
+      a:hover {
+        color: #006699;
+      }
+      .container {
+        padding: 50px;
+      }
+      .dynamic-message {
+        margin-top: 20px;
+        color: #007bff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to the Simple Web Server!</h1>
+      <p>This is the home page with some added styling and interactivity.</p>
+      <a href="/about.html">Go to About Page</a>
+      <div class="dynamic-message" id="greetingMessage"></div>
+    </div>
+
+    <script>
+      const greetingElement = document.getElementById("greetingMessage");
+      const hours = new Date().getHours();
+      let greeting = "";
+
+      if (hours < 12) {
+        greeting = "Good Morning!";
+      } else if (hours < 18) {
+        greeting = "Good Afternoon!";
+      } else {
+        greeting = "Good Evening!";
+      }
+
+      greetingElement.textContent = greeting;
+    </script>
+  </body>
+</html>

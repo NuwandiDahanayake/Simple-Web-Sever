@@ -1,0 +1,73 @@
+<!-- public/about.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #e6f7ff;
+        color: #333;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        padding: 50px;
+      }
+      .profile-card {
+        background: #ffffff;
+        padding: 20px;
+        margin: 0 auto;
+        max-width: 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .profile-card h2 {
+        margin-top: 0;
+        color: #007bff;
+      }
+      .profile-card p {
+        color: #555;
+      }
+      .btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>About Us</h1>
+      <div class="profile-card">
+        <h2>Simple Web Server Team</h2>
+        <p>
+          We are a team of developers who love creating simple and effective web
+          solutions.
+        </p>
+        <button class="btn" onclick="changeBackgroundColor()">
+          Change Background Color
+        </button>
+      </div>
+      <p><a href="/">Back to Home</a></p>
+    </div>
+
+    <script>
+      function changeBackgroundColor() {
+        const colors = ["#e6f7ff", "#f9fbe7", "#ffebee", "#f3e5f5", "#e8eaf6"];
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        document.body.style.backgroundColor = randomColor;
+      }
+    </script>
+  </body>
+</html>
